@@ -1,3 +1,17 @@
+# This requirements_llama.txt includes all necessary packages and versions
+
+# Added packages to the cluster env
+tokenizers>=0.10.0
+transformers>=4.0.0
+peft>=0.0.1
+bitsandbytes>=0.0.1
+huggingface_hub>=0.0.1
+ipython>=7.0.0
+pyarrow==12.0.1
+datasets==2.14.4
+unsloth @ git+https://github.com/unslothai/unsloth.git
+
+# The cluster env
 absl-py==2.1.0
 aiofiles==22.1.0
 aiohttp==3.9.3
