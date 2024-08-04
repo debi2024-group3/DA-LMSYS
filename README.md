@@ -50,26 +50,27 @@ pip install -r requirements.txt
    
     data/lmsys_dataset.csv
 
-#### Fine-Tuning
-
-   Run the fine-tuning script:
-
-    python fine_tune_deberta.py
-
-### Inference
-
-Use the fine-tuned model for inference on new data:
-
-    python inference.py --input "path/to/your/input.csv" --output "path/to/your/output.csv"
-
 ### Fine-Tuning Process
 Steps
 
 - Load and Preprocess the Dataset: Convert the CSV data into a Hugging Face Dataset and select a portion for training.
 - Load the Model and Tokenizer: Initialize the DeBERTa model and tokenizer, add special tokens.
--  Modify Output Layer: Adjust the classifier layer to match the number of labels.
+- Modify Output Layer: Adjust the classifier layer to match the number of labels.
 - Freeze Layers: Freeze all layers except the classifier to reduce computational load.
 - Tokenize Data: Tokenize the text columns using the tokenizer.
 - Prepare Data for Training: Format the datasets for PyTorch.
 - Define Training Arguments: Set up the training parameters.
 - Train the Model: Use the Trainer API to fine-tune the model.
+
+### Results
+
+    Performance Metrics: DeBERTaV3 0.36 on eval_acc and LLama2 0.4 on eval_acc.
+    Model Evaluation: Evaluate the model on a separate test set to ensure generalizability.
+
+### Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
